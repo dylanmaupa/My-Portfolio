@@ -304,7 +304,7 @@ header {
     top: 0;
     // bottom: 0;
     position: fixed;
-    right: -150%;
+    right: -200%;
     // transform: translateX(100%);
     // display: none;
 
@@ -356,11 +356,11 @@ header {
             width: 100%;
             padding-inline: 40px;
 
-            .img {
-                background: #F6F6F6;
-                width: 452px;
-                height: 440px;
-            }
+            // .img {
+            //     background: #F6F6F6;
+            //     width: 452px;
+            //     height: 440px;
+            // }
 
             p {
                 font-size: 18px;
@@ -557,6 +557,22 @@ footer {
         }
     }
 
+    #hire-me{
+        right: -170%;
+        overflow-y: scroll;
+        height: 90vh;
+        margin: 20px 30px;
+        right: 170%;
+        // width: 100%
+        // padding: 0;
+        
+        .wrapper{
+            .about-me{
+                padding: 0;
+            }
+        }
+    }
+
     #contact{
         a{
             padding: 60px 5rem;
@@ -565,6 +581,10 @@ footer {
 }
 
 @media only screen and (max-width:500px){
+
+    body{
+        overflow-x: hidden;
+    }
     #hero{
         flex-direction: column;
         padding-block: 100px;
@@ -634,6 +654,10 @@ footer {
                 }
             }
         }
+    }
+    #hire-me{
+        right: -400%;
+        transition: .5s ease-in-out;
     }
     #contact{
         a{

@@ -257,7 +257,7 @@ header .hamburger .line {
   transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   top: 0;
   position: fixed;
-  right: -150%;
+  right: -200%;
 }
 #hire-me h2 {
   font-size: 64px;
@@ -299,11 +299,6 @@ header .hamburger .line {
 #hire-me .wrapper .about-me {
   width: 100%;
   padding-inline: 40px;
-}
-#hire-me .wrapper .about-me .img {
-  background: #F6F6F6;
-  width: 452px;
-  height: 440px;
 }
 #hire-me .wrapper .about-me p {
   font-size: 18px;
@@ -438,11 +433,24 @@ footer .statement p {
     font-size: 15px;
     padding-right: 0;
   }
+  #hire-me {
+    right: -170%;
+    overflow-y: scroll;
+    height: 90vh;
+    margin: 20px 30px;
+    right: 170%;
+  }
+  #hire-me .wrapper .about-me {
+    padding: 0;
+  }
   #contact a {
     padding: 60px 5rem;
   }
 }
 @media only screen and (max-width: 500px) {
+  body {
+    overflow-x: hidden;
+  }
   #hero {
     flex-direction: column;
     padding-block: 100px;
@@ -501,6 +509,10 @@ footer .statement p {
   }
   #my-skills .wrapper .card p {
     font-size: 13px;
+  }
+  #hire-me {
+    right: -400%;
+    transition: 0.5s ease-in-out;
   }
   #contact a {
     font-size: 35px;
