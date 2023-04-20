@@ -1,0 +1,515 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--black);
+  font-family: "spaceRegular";
+  padding: 10px;
+  overflow-x: hidden;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+
+:root {
+  --black: #000;
+  --purple: #512680;
+  --white: #fff;
+  --off-white: #e9ebe7;
+  --peach: #FF7373;
+  --green: #2BFFA6;
+}
+
+header {
+  position: fixed;
+  padding: 10 15rem;
+  width: 100%;
+  right: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 50px;
+  top: 30px;
+}
+header .contact {
+  padding: 5px 5px;
+  background: var(--white);
+  border-radius: 50px;
+  display: flex;
+  padding-right: 30px;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 0 5px #454545;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+header .contact .img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: #CDCDCD;
+}
+header .contact p {
+  font-family: "spaceBold";
+  font-size: 18px;
+}
+header .hamburger .line {
+  width: 40px;
+  height: 5px;
+  border-radius: 5px;
+  margin-block: 7px;
+  background: var(--white);
+}
+
+#hero {
+  background: var(--purple);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 80px;
+}
+#hero .img {
+  width: 100%;
+}
+#hero .img img {
+  width: 100%;
+}
+#hero .text {
+  width: 100%;
+  color: var(--white);
+  padding-right: 11rem;
+}
+#hero .text p {
+  font-size: 20px;
+  font-family: "spaceBold";
+}
+#hero .text p span {
+  color: rgba(255, 255, 255, 0.33);
+}
+#hero .text h1 {
+  font-family: "spaceBold";
+  font-size: 64px;
+  line-height: 1;
+  margin: 10px 0 40px 0;
+}
+#hero .text h1 span {
+  font-family: "spaceRegular";
+  color: rgba(255, 255, 255, 0.33);
+  font-size: 20px;
+  font-family: "spaceBold";
+}
+
+#projects {
+  background: var(--off-white);
+  border-radius: 10px;
+  padding: 80px 5rem;
+  margin-top: 10px;
+}
+#projects h2 {
+  font-family: "spaceBold";
+  font-size: 40px;
+}
+#projects h2 span {
+  color: rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+  font-family: "spaceRegular";
+}
+#projects .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-top: 50px;
+}
+#projects .wrapper .card:first-child a {
+  color: #0038FF;
+}
+#projects .wrapper .card:nth-child(2) a {
+  color: #FF3D00;
+}
+#projects .wrapper .card:nth-child(3) a {
+  color: #FA00FF;
+}
+#projects .wrapper .card:last-child a {
+  color: #70FF00;
+}
+#projects .wrapper .card {
+  width: 100%;
+}
+#projects .wrapper .card .img {
+  width: 90%;
+  padding: 7px;
+  border-radius: 4px;
+  background: #c3c3c3;
+  border-bottom: 20px;
+}
+#projects .wrapper .card .img img {
+  width: 100%;
+  box-shadow: 0px 0px 15px #a6a6a6;
+}
+#projects .wrapper .card h3 {
+  font-family: "spaceBold";
+  font-size: 20px;
+  margin-top: 40px;
+}
+#projects .wrapper .card h3 span {
+  color: rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+  font-family: "spaceRegular";
+}
+#projects .wrapper .card p {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  padding-right: 80px;
+  margin-block: 20px;
+}
+#projects .wrapper .card p span {
+  color: rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+  font-family: "spaceRegular";
+}
+#projects .wrapper .card a {
+  font-family: "spaceBold";
+}
+
+#my-skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  padding-inline: 5rem;
+  margin-top: 55px;
+}
+#my-skills h2 {
+  font-family: "spaceBold";
+  font-size: 48px;
+}
+#my-skills h2 span {
+  color: rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+  font-family: "spaceRegular";
+  color: rgba(255, 255, 255, 0.15);
+}
+#my-skills .wrapper {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+#my-skills .wrapper .card h3 {
+  font-size: 28px;
+  font-family: "spaceBold";
+}
+#my-skills .wrapper .card h3 span {
+  color: rgba(255, 255, 255, 0.25);
+}
+#my-skills .wrapper .card p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
+  padding-right: 100px;
+  margin-top: 20px;
+}
+#my-skills .wrapper .card p span {
+  color: rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+  font-family: "spaceRegular";
+  color: rgba(255, 255, 255, 0.15);
+  font-size: 12px;
+}
+
+#contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10rem;
+}
+#contact a {
+  background: var(--peach);
+  padding: 100px 24rem;
+  border-radius: 10px;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 80px;
+  width: 100%;
+  text-align: center;
+  font-family: "spaceBold";
+}
+
+#hire-me {
+  background: var(--white);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 60px;
+  margin: 20px 30px;
+  box-shadow: 0px 0px 50px #454545;
+  z-index: 5;
+  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  top: 0;
+  position: fixed;
+  right: -150%;
+}
+#hire-me h2 {
+  font-size: 64px;
+  font-family: "spaceBold";
+}
+#hire-me .icon {
+  position: absolute;
+  right: 60px;
+  top: 20px;
+  cursor: pointer;
+}
+#hire-me .wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 50px;
+}
+#hire-me .wrapper form {
+  width: 100%;
+}
+#hire-me .wrapper form input,
+#hire-me .wrapper form textarea {
+  font-family: "spaceBold";
+  width: 100%;
+  padding: 20px 20px;
+  border-radius: 0;
+  border: none;
+  font-size: 16px;
+  background: #F6F6F6;
+  margin-bottom: 15px;
+  outline: none;
+}
+#hire-me .wrapper form input:last-child {
+  background: #73FFC4;
+  width: auto;
+  font-size: 18px;
+  padding: 20px 40px;
+}
+#hire-me .wrapper .about-me {
+  width: 100%;
+  padding-inline: 40px;
+}
+#hire-me .wrapper .about-me .img {
+  background: #F6F6F6;
+  width: 452px;
+  height: 440px;
+}
+#hire-me .wrapper .about-me p {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-block: 10px;
+  margin-bottom: 30px;
+}
+#hire-me .wrapper .about-me a {
+  background: #FF7373;
+  color: var(--white);
+  font-family: "spaceBold";
+  text-decoration: none;
+  padding: 15px 30px;
+  font-size: 18px;
+}
+
+footer {
+  background: var(--green);
+  border-radius: 10px;
+  margin-top: 10px;
+}
+footer .wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+footer .wrapper .img {
+  width: 30%;
+}
+footer .wrapper .img img {
+  width: 100%;
+}
+footer .wrapper .links {
+  margin-top: 70px;
+}
+footer .wrapper .links h3 {
+  font-family: "spaceBold";
+  font-size: 18px;
+}
+footer .wrapper .links p {
+  margin-block: 15px;
+}
+footer .wrapper .links p a {
+  color: var(--black);
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+footer .wrapper .links p:hover a {
+  text-decoration: underline;
+}
+footer .statement {
+  text-align: center;
+  margin-bottom: 20px;
+}
+footer .statement p {
+  font-family: "spaceBold";
+  font-size: 15px;
+}
+
+@media only screen and (max-width: 1200px) {
+  #hero .text {
+    padding-right: 1rem;
+  }
+  #contact a {
+    padding-inline: 18rem;
+  }
+}
+@media only screen and (max-width: 992px) {
+  header .contact .img {
+    width: 30px;
+    height: 30px;
+  }
+  header .contact p {
+    font-size: 16px;
+  }
+  #hero .text h1 {
+    font-size: 50px;
+    margin-top: 15px;
+  }
+  #hero .text p {
+    font-size: 18px;
+  }
+  #projects .wrapper .card p {
+    padding-right: 20px;
+  }
+  #my-skills .wrapper .card p {
+    padding-right: 20px;
+  }
+  #hire-me {
+    overflow-y: scroll;
+  }
+  #hire-me .wrapper {
+    flex-direction: column;
+  }
+  footer {
+    padding: 60px;
+  }
+  footer .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 50px;
+  }
+  footer .wrapper .img {
+    width: 100%;
+  }
+  footer .wrapper .img img {
+    width: 70%;
+  }
+  footer .wrapper .links {
+    margin-top: 0;
+  }
+}
+@media only screen and (max-width: 850px) {
+  #hero .text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  #hero .text p {
+    font-size: 15px;
+  }
+  #projects {
+    padding-inline: 3rem;
+  }
+  #projects .wrapper .card p {
+    font-size: 15px;
+    padding-right: 0;
+  }
+  #my-skills {
+    padding-inline: 3rem;
+  }
+  #my-skills .wrapper .card p {
+    font-size: 15px;
+    padding-right: 0;
+  }
+  #contact a {
+    padding: 60px 5rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #hero {
+    flex-direction: column;
+    padding-block: 100px;
+    text-align: center;
+  }
+  #hero .text {
+    padding-right: 0;
+  }
+  #hero .text h1 {
+    font-size: 40px;
+  }
+  #hero .text h1 span {
+    display: none;
+  }
+  #hero .text p span {
+    display: none;
+  }
+  #projects {
+    padding: 50px 20px;
+  }
+  #projects h2 {
+    font-size: 30px;
+  }
+  #projects h2 span {
+    display: none;
+  }
+  #projects .wrapper {
+    grid-template-columns: 1fr;
+  }
+  #projects .wrapper .card h3 {
+    font-size: 16px;
+  }
+  #projects .wrapper .card h3 span {
+    display: none;
+  }
+  #projects .wrapper .card p {
+    font-size: 13px;
+  }
+  #projects .wrapper .card p span {
+    display: none;
+  }
+  #my-skills {
+    padding: 50px 20px;
+  }
+  #my-skills h2 {
+    font-size: 30px;
+  }
+  #my-skills h2 span {
+    display: none;
+  }
+  #my-skills .wrapper {
+    grid-template-columns: 1fr;
+  }
+  #my-skills .wrapper .card h3 {
+    font-size: 16px;
+  }
+  #my-skills .wrapper .card p {
+    font-size: 13px;
+  }
+  #contact a {
+    font-size: 35px;
+    padding-inline: 2.3rem;
+  }
+  footer .wrapper {
+    grid-template-columns: 1fr;
+  }
+  footer .wrapper .img {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

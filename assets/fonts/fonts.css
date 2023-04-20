@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "spaceRegular";
+    src: url(./SpaceMono-Regular.ttf);
+}
+
+@font-face {
+    font-family: "spaceBold";
+    src: url(./SpaceMono-Bold.ttf);
+}
