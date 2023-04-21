@@ -337,6 +337,88 @@ nav{
     left: 10px;
 }
 
+#hire-me {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 50px 60px;
+    // height: 0vh;
+    position: fixed;
+    transition: .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    top: 2rem;
+    right: -200%;
+    z-index: 5;
+    // left: 60px;
+    margin-inline: 60px;
+    overflow-y: scroll;
+    h2{
+        font-family: 'spaceBold';
+        font-size: 60px;
+        text-align: center;
+    }
+    .icon{
+        position: absolute;
+        right: -20px;
+        top: 10px;
+        width: 15%;
+        svg{
+            width: 100%;
+        }
+    }
+    .wrapper{
+        margin-top: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+
+        form{
+            width: 100%;
+            input,textarea{
+                width: 100%;
+                padding: 20px 20px;
+                font-family: 'spaceBold';
+                margin-bottom: 15px;
+                font-size: 16px;
+                border: none;
+                background: #f6f6f6;
+                outline: none;
+            }
+            input:last-child{
+                width: auto;
+                background: #2BFFA6;
+                transition: .3s ease-in-out;
+            }
+            input:last-child:hover{
+                background: #fff;
+                border: 2px solid #2BFFA6;
+                border-radius: 10px
+            }
+        }
+        .about-me{
+            width: 100%;
+            p{
+                color: #7f7f7f;
+                margin-bottom: 30px;
+            }
+            a{
+                text-decoration: none;
+                background: #ec7071;
+                padding: 10px 20px;
+                font-family: 'spaceBold';
+                font-size: 16px;
+                color: #fff;
+                transition: .3s ease-in-out;
+            }
+            a:hover{
+                background: #fff;
+                border: 2px solid #ec7071;
+                border-radius: 10px;
+                color: #000;
+            }
+        }
+    }
+}
+
 footer {
     background: var(--green);
     border-radius: 10px;
@@ -406,7 +488,9 @@ footer {
 }
 
 @media only screen and (max-width:992px){
-    
+    body{
+        overflow-x: hidden;
+    }
     header{
         .contact{
             .img{
@@ -457,6 +541,10 @@ footer {
                 }
             }
         }
+    }
+    #hire-me{
+        margin: 0 auto;
+        right: -400%;
     }
     footer{
         padding: 60px;
@@ -620,6 +708,7 @@ footer {
         border-radius: 20px;
         padding: 30px 20px;
         height: 70vh;
+        margin: 0 auto;
         position: fixed;
         top: 2rem;
         right: -100%;
@@ -641,6 +730,7 @@ footer {
         }
         .wrapper{
             margin-top: 20px;
+            flex-direction: column;
             form{
                 input,textarea{
                     width: 100%;

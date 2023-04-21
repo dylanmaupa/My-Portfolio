@@ -289,6 +289,85 @@ nav ul li a {
   left: 10px;
 }
 
+#hire-me {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 50px 60px;
+  position: fixed;
+  transition: 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  top: 2rem;
+  right: -200%;
+  z-index: 5;
+  margin-inline: 60px;
+  overflow-y: scroll;
+}
+#hire-me h2 {
+  font-family: "spaceBold";
+  font-size: 60px;
+  text-align: center;
+}
+#hire-me .icon {
+  position: absolute;
+  right: -20px;
+  top: 10px;
+  width: 15%;
+}
+#hire-me .icon svg {
+  width: 100%;
+}
+#hire-me .wrapper {
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+#hire-me .wrapper form {
+  width: 100%;
+}
+#hire-me .wrapper form input, #hire-me .wrapper form textarea {
+  width: 100%;
+  padding: 20px 20px;
+  font-family: "spaceBold";
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: none;
+  background: #f6f6f6;
+  outline: none;
+}
+#hire-me .wrapper form input:last-child {
+  width: auto;
+  background: #2BFFA6;
+  transition: 0.3s ease-in-out;
+}
+#hire-me .wrapper form input:last-child:hover {
+  background: #fff;
+  border: 2px solid #2BFFA6;
+  border-radius: 10px;
+}
+#hire-me .wrapper .about-me {
+  width: 100%;
+}
+#hire-me .wrapper .about-me p {
+  color: #7f7f7f;
+  margin-bottom: 30px;
+}
+#hire-me .wrapper .about-me a {
+  text-decoration: none;
+  background: #ec7071;
+  padding: 10px 20px;
+  font-family: "spaceBold";
+  font-size: 16px;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+#hire-me .wrapper .about-me a:hover {
+  background: #fff;
+  border: 2px solid #ec7071;
+  border-radius: 10px;
+  color: #000;
+}
+
 footer {
   background: var(--green);
   border-radius: 10px;
@@ -341,6 +420,9 @@ footer .statement p {
   }
 }
 @media only screen and (max-width: 992px) {
+  body {
+    overflow-x: hidden;
+  }
   header .contact .img {
     width: 30px;
     height: 30px;
@@ -363,6 +445,10 @@ footer .statement p {
   }
   #my-skills .wrapper .card p {
     padding-right: 20px;
+  }
+  #hire-me {
+    margin: 0 auto;
+    right: -400%;
   }
   footer {
     padding: 60px;
@@ -481,6 +567,7 @@ footer .statement p {
     border-radius: 20px;
     padding: 30px 20px;
     height: 70vh;
+    margin: 0 auto;
     position: fixed;
     top: 2rem;
     right: -100%;
@@ -503,6 +590,7 @@ footer .statement p {
   }
   #hire-me .wrapper {
     margin-top: 20px;
+    flex-direction: column;
   }
   #hire-me .wrapper form input, #hire-me .wrapper form textarea {
     width: 100%;
