@@ -77,9 +77,51 @@ header {
             border-radius: 5px;
             margin-block: 7px;
             background: var(--white);
+            box-shadow: 0 0 5px #454545;
         }
     }
 
+}
+
+.navActive{
+    left: 10px;
+    right: 10px;
+    transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+nav{
+    background: var(--white);
+    border-radius: 10px;
+    display: flex;
+    text-align: center; 
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: -100%;
+    // width: 100%;
+    z-index: 2;
+    // right: 10px;
+    top: 6rem;
+    height: 60vh;
+    transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    ul{
+        list-style: none;
+
+        li{
+            margin-block: 30px;
+            span{
+                @include span();
+                font-size: 16px;
+            }
+            a{
+                text-decoration: none;
+                font-size: 24px;
+                color: var(--black);
+                font-family: 'spaceBold';
+            }
+        }
+    }
 }
 
 #hero {
@@ -290,97 +332,9 @@ header {
     }
 }
 
-#hire-me {
-    background: var(--white);
-    border-radius: 20px;
-    display: flex;
-    // width: 90%;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 30px 60px;
-    margin: 20px 30px;
-    box-shadow: 0px 0px 50px #454545;
-    z-index: 5;
-    transition: .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    top: 0;
-    // bottom: 0;
-    position: fixed;
-    right: -200%;
-    // transform: translateX(100%);
-    // display: none;
-
-
-    h2 {
-        font-size: 64px;
-        font-family: 'spaceBold';
-    }
-
-    .icon{
-        position: absolute;
-        right: 60px;
-        top: 20px;
-        cursor: pointer;
-    }
-
-    .wrapper {
-        display: flex;
-        // align-items: center;
-        justify-content: center;
-        gap: 60px;
-        margin-top: 50px;
-
-        form {
-            width: 100%;
-
-            input,
-            textarea {
-                font-family: 'spaceBold';
-                width: 100%;
-                padding: 20px 20px;
-                border-radius: 0;
-                border: none;
-                font-size: 16px;
-                background: #F6F6F6;
-                margin-bottom: 15px;
-                outline: none;
-            }
-
-            input:last-child {
-                background: #73FFC4;
-                width: auto;
-                font-size: 18px;
-                padding: 20px 40px;
-            }
-        }
-
-        .about-me {
-            width: 100%;
-            padding-inline: 40px;
-
-            // .img {
-            //     background: #F6F6F6;
-            //     width: 452px;
-            //     height: 440px;
-            // }
-
-            p {
-                font-size: 18px;
-                color: rgba(0, 0, 0, 0.5);
-                margin-block: 10px;
-                margin-bottom: 30px;
-            }
-
-            a {
-                background: #FF7373;
-                color: var(--white);
-                font-family: 'spaceBold';
-                text-decoration: none;
-                padding: 15px 30px;
-                font-size: 18px;
-            }
-        }
-    }
+.hireActive{
+    right: 19px;
+    left: 10px;
 }
 
 footer {
@@ -465,6 +419,16 @@ footer {
         }
     }
 
+    nav{
+        ul{
+            li{
+                a{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
     #hero{
         .text{
             h1{
@@ -494,12 +458,6 @@ footer {
             }
         }
     }
-    #hire-me{
-        overflow-y: scroll;
-        .wrapper{
-            flex-direction: column;
-        }
-    }
     footer{
         padding: 60px;
         .wrapper{
@@ -523,6 +481,7 @@ footer {
 
 
 @media only screen and (max-width:850px){
+
     #hero{
         .text{
             h1{
@@ -559,21 +518,6 @@ footer {
         }
     }
 
-    #hire-me{
-        right: -170%;
-        overflow-y: scroll;
-        height: 90vh;
-        margin: 20px 30px;
-        right: 170%;
-        // width: 100%
-        // padding: 0;
-        
-        .wrapper{
-            .about-me{
-                padding: 0;
-            }
-        }
-    }
 
     #contact{
         a{
@@ -587,10 +531,23 @@ footer {
     body{
         overflow-x: hidden;
     }
+
+    nav{
+        ul{
+            li{
+                a{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
     #hero{
         flex-direction: column;
         padding-block: 100px;
         text-align: center;
+        padding-inline: 15px;
+        position: relative;
         .text{
             padding-right: 0;
 
@@ -657,9 +614,69 @@ footer {
             }
         }
     }
-    #hire-me{
-        right: -400%;
-        transition: .5s ease-in-out;
+
+    #hire-me {
+        background: var(--white);
+        border-radius: 20px;
+        padding: 30px 20px;
+        height: 70vh;
+        position: fixed;
+        top: 2rem;
+        right: -100%;
+        z-index: 5;
+        left: 100%;
+        overflow-y: scroll;
+        h2{
+            font-family: 'spaceBold';
+            font-size: 30px;
+        }
+        .icon{
+            position: absolute;
+            right: 10px;
+            top: -20px;
+            width: 15%;
+            svg{
+                width: 100%;
+            }
+        }
+        .wrapper{
+            margin-top: 20px;
+            form{
+                input,textarea{
+                    width: 100%;
+                    padding: 10px 20px;
+                    font-family: 'spaceBold';
+                    margin-bottom: 15px;
+                    font-size: 14px;
+                    border: none;
+                    background: #f6f6f6;
+                    outline: none;
+                }
+                input:last-child{
+                    width: auto;
+                    background: #2BFFA6;
+                    transition: .3s ease-in-out;
+                }
+                input:last-child:hover{
+                    background: #47faaf;
+                }
+            }
+            .about-me{
+                margin-top: 40px;
+                p{
+                    color: #7f7f7f;
+                    margin-bottom: 30px;
+                }
+                a{
+                    text-decoration: none;
+                    background: #ec7071;
+                    padding: 10px 20px;
+                    font-family: 'spaceBold';
+                    font-size: 16px;
+                    color: #fff;
+                }
+            }
+        }
     }
     #contact{
         a{
@@ -668,11 +685,16 @@ footer {
         }
     }
     footer{
+        padding: 30px;
         .wrapper{
             grid-template-columns: 1fr;
             .img{
                 display: none;
             }
+        }
+        .statement{
+            margin-top: 20px;
+            margin-bottom: 10px;
         }
     }
 }

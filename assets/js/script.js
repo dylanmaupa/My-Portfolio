@@ -1,31 +1,46 @@
 // const scrollreveal = require("scrollreveal");
 
 const hire = document.getElementById("hire");
-const hireMe = document.getElementById("hire-me");
 const cancel = document.getElementById("cancel");
 
-hire.onclick = function () {
-  hireMe.style.right = 0;
+navLink = document.querySelector(".nav-link");
+hamburger = document.querySelector(".hamburger");
+hamburger.onclick = function () {
+  nav = document.querySelector(".nav");
+  nav.classList.toggle("navActive");
+  console.log("clicked");
 
-  cancel.onclick = function () {
-    hireMe.style.right = -200 + "%";
-  };
+  // if(navLink.onclick()){
+
+  // }
 };
+
+const hireMe = document.querySelector(".hire-me");
+hire.onclick = function(){
+  hireMe.classList.toggle("hireActive");
+
+  // cancel.onclick = function(){
+  //   hireMe.classList.toggle("hireActive");
+  // }
+}
+
+const mediaQuery = window.matchMedia("(max-width: 500px)");
 
 var slideUp = {
-    distance: '400%',
-    origin: 'left',
-    opacity: null
+  distance: "400%",
+  origin: "left",
+  opacity: null,
 };
 
-window.matchMedia("")
+window.matchMedia("");
 
-ScrollReveal().reveal("#my-skills, #projects", slideUp, {reset:true});
+ScrollReveal().reveal("#my-skills, #projects", slideUp, { reset: true });
 
-ScrollReveal().reveal("#contact",{
-    rotate: {
-        x: 20,
-        z: 20
-    },
-    delay: 200, easing: "ease-out"
+ScrollReveal().reveal("#contact", {
+  rotate: {
+    x: 20,
+    z: 20,
+  },
+  delay: 200,
+  easing: "ease-out",
 });
