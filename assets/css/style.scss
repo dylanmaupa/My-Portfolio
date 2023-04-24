@@ -96,7 +96,7 @@ nav{
     text-align: center; 
     align-items: center;
     justify-content: center;
-    position: absolute;
+    position: fixed;
     left: -100%;
     // width: 100%;
     z-index: 2;
@@ -119,6 +119,11 @@ nav{
                 font-size: 24px;
                 color: var(--black);
                 font-family: 'spaceBold';
+                transition: all 100ms ease-in-out;
+
+            }
+            a:hover {
+                font-size: 32px;
             }
         }
     }
@@ -332,11 +337,6 @@ nav{
     }
 }
 
-.hireActive{
-    right: 19px;
-    left: 10px;
-}
-
 #hire-me {
     background: var(--white);
     border-radius: 20px;
@@ -349,7 +349,8 @@ nav{
     z-index: 5;
     // left: 60px;
     margin-inline: 60px;
-    overflow-y: scroll;
+    // overflow-y: scroll;
+    overflow-x: hidden;
     h2{
         font-family: 'spaceBold';
         font-size: 60px;
@@ -470,6 +471,10 @@ footer {
         p{
             font-family: 'spaceBold';
             font-size: 15px;
+            a{
+                color: var(--white);
+                text-decoration: none;
+            }
         }
     }
 }
@@ -509,6 +514,7 @@ footer {
                 a{
                     font-size: 20px;
                 }
+
             }
         }
     }
@@ -707,7 +713,7 @@ footer {
         background: var(--white);
         border-radius: 20px;
         padding: 30px 20px;
-        height: 70vh;
+        height: 80vh;
         margin: 0 auto;
         position: fixed;
         top: 2rem;

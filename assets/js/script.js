@@ -18,7 +18,7 @@ hamburger.onclick = function () {
 const hireMe = document.querySelector(".hire-me");
 hire.onclick = function(){
   hireMe.style.left = 10 + "px";
-  hireMe.style.right = 19 + "px";
+  hireMe.style.right = 10 + "px";
 
   cancel.onclick = function(){
     hireMe.style.right = -200 + "%";
