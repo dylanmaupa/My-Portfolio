@@ -86,6 +86,7 @@ nav {
   left: -100%;
   z-index: 2;
   top: 6rem;
+  box-shadow: 0 0 5px #7f7f7f;
   height: 60vh;
   transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
@@ -122,9 +123,33 @@ nav ul li a:hover {
 }
 #hero .img {
   width: 100%;
+  -webkit-animation: tags2 4s infinite ease-in-out alternate;
+          animation: tags2 4s infinite ease-in-out alternate;
+}
+@-webkit-keyframes tags2 {
+  50% {
+    transform: rotate(10deg);
+  }
+}
+@keyframes tags2 {
+  50% {
+    transform: rotate(10deg);
+  }
 }
 #hero .img img {
   width: 100%;
+  -webkit-animation: tags 4s ease-in-out alternate;
+          animation: tags 4s ease-in-out alternate;
+}
+@-webkit-keyframes tags {
+  from {
+    width: 70%;
+  }
+}
+@keyframes tags {
+  from {
+    width: 70%;
+  }
 }
 #hero .text {
   width: 100%;
@@ -193,6 +218,7 @@ nav ul li a:hover {
   border-radius: 4px;
   background: #c3c3c3;
   border-bottom: 20px;
+  transition: 0.2s ease-in-out;
 }
 #projects .wrapper .card .img img {
   width: 100%;
@@ -221,6 +247,13 @@ nav ul li a:hover {
 }
 #projects .wrapper .card a {
   font-family: "spaceBold";
+  transition: 0.2s ease-in-out;
+}
+#projects .wrapper .card:hover .img {
+  width: 100%;
+}
+#projects .wrapper .card:hover a {
+  font-size: 18px;
 }
 
 #my-skills {
@@ -324,7 +357,8 @@ nav ul li a:hover {
 #hire-me .wrapper form {
   width: 100%;
 }
-#hire-me .wrapper form input, #hire-me .wrapper form textarea {
+#hire-me .wrapper form input,
+#hire-me .wrapper form textarea {
   width: 100%;
   padding: 20px 20px;
   font-family: "spaceBold";
@@ -595,7 +629,8 @@ footer .statement p a {
     margin-top: 20px;
     flex-direction: column;
   }
-  #hire-me .wrapper form input, #hire-me .wrapper form textarea {
+  #hire-me .wrapper form input,
+#hire-me .wrapper form textarea {
     width: 100%;
     padding: 10px 20px;
     font-family: "spaceBold";
