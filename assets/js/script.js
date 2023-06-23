@@ -32,13 +32,13 @@ hire.onclick = function(){
   }
 }
 
-ScrollReveal().reveal("#my-skills, #projects", slideUp, { reset: true });
+// ScrollReveal().reveal("#my-skills, #projects", slideUp, { reset: true });
 
-ScrollReveal().reveal("#contact", {
-  rotate: {
-    x: 20,
-    z: 20,
-  },
-  delay: 200,
-  easing: "ease-out",
-});
+// ScrollReveal().reveal("#contact", {
+//   rotate: {
+//     x: 20,
+//     z: 20,
+//   },
+//   delay: 200,
+//   easing: "ease-out",
+// });
