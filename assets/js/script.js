@@ -10,10 +10,16 @@ hamburger.onclick = function () {
   nav.classList.toggle("navActive");
   console.log("clicked");
 
-  // if(navLink.onclick()){
-
-  // }
 };
+
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader")
+
+  loader.classList.add("loader-hidden")
+  loader.addEventListener("transitionend", () => {
+    document.body.removeChild("loader")
+  })
+})
 
 const hireMe = document.querySelector(".hire-me");
 hire.onclick = function(){
@@ -25,16 +31,6 @@ hire.onclick = function(){
     hireMe.style.left = 200 + "%";
   }
 }
-
-const mediaQuery = window.matchMedia("(max-width: 500px)");
-
-var slideUp = {
-  distance: "400%",
-  origin: "left",
-  opacity: null,
-};
-
-window.matchMedia("");
 
 ScrollReveal().reveal("#my-skills, #projects", slideUp, { reset: true });
 

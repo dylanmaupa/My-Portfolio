@@ -4,9 +4,47 @@
     box-sizing: border-box;
 }
 
+@import "about";
+
 html {
     scroll-behavior: smooth;
 }
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f7f9fb;
+    transition: opacity .75s, visibility .75s;
+}
+.loader-hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after{
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: #7449f5;
+    border-radius: 50%;
+    animation: loading .75s ease infinite;
+    @keyframes loading {
+        from{
+            transform: rotate(0turn);
+        }
+        to{
+            transform: rotate(1turn);
+        }
+    }
+}
+
 
 body {
     background: var(--black);
@@ -73,6 +111,8 @@ header {
     }
 
     .hamburger {
+        cursor: pointer;
+
         .line {
             width: 40px;
             height: 5px;
@@ -157,11 +197,11 @@ nav {
             width: 100%;
             animation: tags 4s ease-in-out alternate;
 
-            @keyframes tags {
-                from {
-                    width: 70%;
-                }
-            }
+            // @keyframes tags {
+            //     from {
+            //         width: 70%;
+            //     }
+            // }
 
         }
     }
@@ -289,11 +329,13 @@ nav {
                 transition: .2s ease-in-out;
             }
         }
-        .card:hover{
-            .img{
+
+        .card:hover {
+            .img {
                 width: 100%;
             }
-            a{
+
+            a {
                 font-size: 18px;
             }
         }
@@ -381,6 +423,7 @@ nav {
     transition: .5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     top: 2rem;
     right: -200%;
+    left: 200%;
     z-index: 5;
     // left: 60px;
     margin-inline: 60px;
@@ -428,19 +471,26 @@ nav {
 
             input:last-child {
                 width: auto;
+                cursor: pointer;
                 background: #2BFFA6;
                 transition: .3s ease-in-out;
             }
 
             input:last-child:hover {
-                background: #fff;
-                border: 2px solid #2BFFA6;
-                border-radius: 10px
+                background: #04e487;
             }
         }
 
         .about-me {
             width: 100%;
+
+            .img {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                }
+            }
 
             p {
                 color: #7f7f7f;
@@ -458,10 +508,7 @@ nav {
             }
 
             a:hover {
-                background: #fff;
-                border: 2px solid #ec7071;
-                border-radius: 10px;
-                color: #000;
+                background: #f85757;
             }
         }
     }

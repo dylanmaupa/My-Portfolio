@@ -4,8 +4,63 @@
   box-sizing: border-box;
 }
 
+.banner {
+  color: var(--white);
+  padding: 0 100px;
+}
+.banner h1 {
+  font-family: "spaceBold";
+  font-size: 10rem;
+  margin-bottom: 50px;
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f7f9fb;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #dddddd;
+  border-top-color: #7449f5;
+  border-radius: 50%;
+  -webkit-animation: loading 0.75s ease infinite;
+          animation: loading 0.75s ease infinite;
+}
+@-webkit-keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
 }
 
 body {
@@ -59,6 +114,9 @@ header .contact .img {
 header .contact p {
   font-family: "spaceBold";
   font-size: 18px;
+}
+header .hamburger {
+  cursor: pointer;
 }
 header .hamburger .line {
   width: 40px;
@@ -140,16 +198,6 @@ nav ul li a:hover {
   width: 100%;
   -webkit-animation: tags 4s ease-in-out alternate;
           animation: tags 4s ease-in-out alternate;
-}
-@-webkit-keyframes tags {
-  from {
-    width: 70%;
-  }
-}
-@keyframes tags {
-  from {
-    width: 70%;
-  }
 }
 #hero .text {
   width: 100%;
@@ -329,6 +377,7 @@ nav ul li a:hover {
   transition: 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   top: 2rem;
   right: -200%;
+  left: 200%;
   z-index: 5;
   margin-inline: 60px;
   overflow-x: hidden;
@@ -370,15 +419,20 @@ nav ul li a:hover {
 }
 #hire-me .wrapper form input:last-child {
   width: auto;
+  cursor: pointer;
   background: #2BFFA6;
   transition: 0.3s ease-in-out;
 }
 #hire-me .wrapper form input:last-child:hover {
-  background: #fff;
-  border: 2px solid #2BFFA6;
-  border-radius: 10px;
+  background: #04e487;
 }
 #hire-me .wrapper .about-me {
+  width: 100%;
+}
+#hire-me .wrapper .about-me .img {
+  width: 100%;
+}
+#hire-me .wrapper .about-me .img img {
   width: 100%;
 }
 #hire-me .wrapper .about-me p {
@@ -395,10 +449,7 @@ nav ul li a:hover {
   transition: 0.3s ease-in-out;
 }
 #hire-me .wrapper .about-me a:hover {
-  background: #fff;
-  border: 2px solid #ec7071;
-  border-radius: 10px;
-  color: #000;
+  background: #f85757;
 }
 
 footer {
