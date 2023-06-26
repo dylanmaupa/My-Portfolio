@@ -3,13 +3,16 @@
 const hire = document.getElementById("hire");
 const cancel = document.getElementById("cancel");
 
-navLink = document.querySelector(".nav-link");
+navLink = document.querySelector(".nav-links");
 hamburger = document.querySelector(".hamburger");
 hamburger.onclick = function () {
   nav = document.querySelector(".nav");
   nav.classList.toggle("navActive");
   console.log("clicked");
-
+  navLink.onclick = function() {
+    nav = document.querySelector(".nav");
+    nav.classList.remove("navActive")
+}
 };
 
 window.addEventListener("load", () => {
@@ -32,13 +35,13 @@ hire.onclick = function(){
   }
 }
 
-// ScrollReveal().reveal("#my-skills, #projects", slideUp, { reset: true });
+ScrollReveal().reveal("#my-skills, #projects", slideUp, { reset: true });
 
-// ScrollReveal().reveal("#contact", {
-//   rotate: {
-//     x: 20,
-//     z: 20,
-//   },
-//   delay: 200,
-//   easing: "ease-out",
-// });
+ScrollReveal().reveal("#contact", {
+  rotate: {
+    x: 20,
+    z: 20,
+  },
+  delay: 200,
+  easing: "ease-out",
+});

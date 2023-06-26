@@ -7,13 +7,51 @@
 .banner {
   color: var(--white);
   padding: 0 100px;
+  margin: 60px 0;
 }
 .banner h1 {
   font-family: "spaceBold";
   font-size: 10rem;
   margin-bottom: 50px;
 }
+.banner p {
+  font-size: 22px;
+}
+.banner p a {
+  font-family: "spaceBold";
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.banner p a:hover {
+  color: var(--purple);
+}
+.banner p a:visited {
+  color: var(--green);
+}
 
+@media only screen and (max-width: 768px) {
+  .banner {
+    padding: 0 50px;
+  }
+  .banner h1 {
+    font-size: 7rem;
+    margin-bottom: 40px;
+  }
+  .banner p {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 558px) {
+  .banner {
+    padding: 0 10px;
+    margin-top: 80px;
+  }
+  .banner h1 {
+    margin-bottom: 20px;
+    font-size: 5rem;
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -41,7 +79,7 @@ html {
   content: "";
   width: 75px;
   height: 75px;
-  border: 15px solid #dddddd;
+  border: 2px solid #f7f9fb;
   border-top-color: #7449f5;
   border-radius: 50%;
   -webkit-animation: loading 0.75s ease infinite;
@@ -464,6 +502,13 @@ footer .wrapper {
 }
 footer .wrapper .img {
   width: 30%;
+  -webkit-animation: tags2 4s infinite ease-in-out alternate;
+          animation: tags2 4s infinite ease-in-out alternate;
+}
+@keyframes tags2 {
+  50% {
+    transform: rotate(6deg);
+  }
 }
 footer .wrapper .img img {
   width: 100%;

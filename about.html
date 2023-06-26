@@ -33,19 +33,20 @@
     <div class="loader"></div>
     <main>
         <div class="banner">
-            <h1>hey..</h1>
-            <p>Hey fam! So the name is Dylan Tafadzwa Maupa (as you saw in the beginning) and I am a lover of all things
+            <h1>hey...</h1>
+            <p>Hey fam 🤗! So the name is Dylan Tafadzwa Maupa (as you saw in the beginning) and I am a lover of all things
                 Tech and Music. I was not a Web Developer at first because this was not what I even studied for in
                 school but I was blessed with a twin brother, <a
-                    href="https://denzel-maupa-portfolio.netlify.app">Denzel</a>, and he made me love "techie things"
+                    href="https://denzel-maupa-portfolio.netlify.app" target="_blank">Denzel</a>, and he made me love "techie things"
                 and I am grateful. <br> I came on earth on the 08th of December, 2002. I had an opportunity to expand my tech
-                love at <a href="https://uncommon.org">Uncommon.org</a> and took the chance of becoming a Front-end Web
+                love at <a href="https://uncommon.org" target="_blank">Uncommon.org</a> and took the chance of becoming a Front-end Web
                 Developer which was so fascinating to me. I am a person who is adaptive, grasp concepts fast and also
                 code-blooded lol. I love talking and networking to different people, getting to hear their journeys and
                 experience. I'm a Christian and was raised in church by music and yes, I am a musician. Music
                 production, recording and playing, I do it all. I am happy that I got to take a one in a million chance
                 like this and I am grateful. </p>
         </div>
+        <div class="back">Back to Homepage</div>
         <section id="hire-me" class="hire-me">
             <h2>Get in Touch.</h2>
             <div id="cancel" class="icon">
@@ -71,28 +72,57 @@
                         required></textarea>
                     <input type="submit" value="Send Message">
                 </form>
-                <div class="about-me">
+                <!-- <div class="about-me">
                     <div class="img">
                         <img src="./assets/images/me.webp" alt="_profile_picture">
                     </div>
                     <p>Oh hi there! This is me. Wanna get to know me better?</p>
                     <a href="./about.html">About Me</a>
-                </div>
+                </div> -->
             </div>
         </section>
+        <footer>
+            <div class="wrapper">
+                <div class="img">
+                    <img src="./assets/images/tags.svg" alt="" loading="lazy">
+                </div>
+                <div class="links">
+                    <h3>Web Pages</h3>
+                    <p><a href="./index.html">Home</a></p>
+                    <p><a href="#projects">Portfolio</a></p>
+                    <p><a href="./about.html">About Me</a></p>
+                    <p><a class="hire-me" href="#hire-me">Contact Me</a></p>
+                </div>
+                <div class="links">
+                    <h3>My Social Media</h3>
+                    <p><a href="#">LinkedIn</a></p>
+                    <p><a href="https://wa.me/+263788524928">WhatsApp</a></p>
+                    <p><a href="https://github.com/dylanmaupa">Github</a></p>
+                    <p><a href="#">Instagram</a></p>
+                    <p><a href="#">Facebook</a></p>
+                </div>
+                <div class="links">
+                    <h3>Paperwork</h3>
+                    <p><a href="#">Invoices</a></p>
+                    <p><a href="#">Privacy Policy</a></p>
+                    <p><a href="./assets/Dylan Maupa Resume.pdf">My CV</a></p>
+                </div>
+            </div>
+            <div class="statement">
+                <p><a href="https://www.instagram.com/designed_by_denzel">#Designed by Denzel</a></p>
+                <p>#Dylan the Developer</p>
+            </div>
+        </footer>
     </main>
     <script>
-        navLink = document.querySelector(".nav-link");
+        navLink = document.querySelector(".nav-links");
         hamburger = document.querySelector(".hamburger");
         hamburger.onclick = function () {
             nav = document.querySelector(".nav");
             nav.classList.toggle("navActive");
             console.log("clicked");
-
-            // if(navLink.onclick()){
-
-            // }
         };
+        
         const hireMe = document.querySelector(".hire-me");
         hire.onclick = function () {
             hireMe.style.left = 10 + "px";

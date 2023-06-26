@@ -32,7 +32,7 @@ html {
     content: "";
     width: 75px;
     height: 75px;
-    border: 15px solid #dddddd;
+    border: 2px solid #f7f9fb;
     border-top-color: #7449f5;
     border-radius: 50%;
     animation: loading .75s ease infinite;
@@ -528,6 +528,13 @@ footer {
 
         .img {
             width: 30%;
+            animation: tags2 4s infinite ease-in-out alternate;
+
+        @keyframes tags2 {
+            50% {
+                transform: rotate(6deg);
+            }
+        }
 
             img {
                 width: 100%;
