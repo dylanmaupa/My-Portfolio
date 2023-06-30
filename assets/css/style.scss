@@ -258,7 +258,7 @@ nav {
 
     .wrapper {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 60px;
         margin-top: 50px;
 
@@ -365,7 +365,7 @@ nav {
     .wrapper {
         margin-top: 100px;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 60px;
 
         .card {
@@ -381,7 +381,7 @@ nav {
             p {
                 font-size: 16px;
                 color: rgba(255, 255, 255, 0.5);
-                padding-right: 100px;
+                padding-right: 70px;
                 margin-top: 20px;
 
                 span {
@@ -642,6 +642,7 @@ footer {
 
     #projects {
         .wrapper {
+            grid-template-columns: 1fr 1fr;
             .card {
                 p {
                     padding-right: 20px
@@ -652,6 +653,7 @@ footer {
 
     #my-skills {
         .wrapper {
+            grid-template-columns: 1fr 1fr;
             .card {
                 p {
                     padding-right: 20px;

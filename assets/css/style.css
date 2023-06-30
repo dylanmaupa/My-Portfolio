@@ -9,6 +9,9 @@
   padding: 0 100px;
   margin: 60px 0;
 }
+.banner .back {
+  color: var(--green);
+}
 .banner h1 {
   font-family: "spaceBold";
   font-size: 10rem;
@@ -16,6 +19,7 @@
 }
 .banner p {
   font-size: 22px;
+  margin-bottom: 50px;
 }
 .banner p a {
   font-family: "spaceBold";
@@ -280,7 +284,7 @@ nav ul li a:hover {
 }
 #projects .wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 60px;
   margin-top: 50px;
 }
@@ -365,7 +369,7 @@ nav ul li a:hover {
 #my-skills .wrapper {
   margin-top: 100px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 60px;
 }
 #my-skills .wrapper .card h3 {
@@ -378,7 +382,7 @@ nav ul li a:hover {
 #my-skills .wrapper .card p {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.5);
-  padding-right: 100px;
+  padding-right: 70px;
   margin-top: 20px;
 }
 #my-skills .wrapper .card p span {
@@ -574,8 +578,14 @@ footer .statement p a {
   #hero .text p {
     font-size: 18px;
   }
+  #projects .wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
   #projects .wrapper .card p {
     padding-right: 20px;
+  }
+  #my-skills .wrapper {
+    grid-template-columns: 1fr 1fr;
   }
   #my-skills .wrapper .card p {
     padding-right: 20px;

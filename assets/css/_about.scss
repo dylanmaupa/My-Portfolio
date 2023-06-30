@@ -2,6 +2,10 @@
     color: var(--white);
     padding: 0 100px;
     margin: 60px 0;
+    
+    .back{
+        color: var(--green);
+    }
     h1{
         font-family: 'spaceBold';
         font-size: 10rem;
@@ -9,6 +13,7 @@
     }
     p{
         font-size: 22px;
+        margin-bottom: 50px;
         a{
             font-family: 'spaceBold';
             color: #fff;
